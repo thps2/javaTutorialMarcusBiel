@@ -23,4 +23,27 @@ public class PersonTest {
 
         Assertions.assertEquals(3,Person.numberOfPersons());
     }
+
+    @Test
+    public void demonstrateArrays(){
+        Person[] persons = new Person[4];
+        for(int i=0;i<persons.length;i++){
+            persons[i] = new Person();
+
+            System.out.println(persons[0].helloWorld());
+        }
+    }
+
+    @Test
+    public void demonstrateArraysAndForEach(){
+        Person[] persons = new Person[4];
+        for(int i=0;i<persons.length;i++){
+            persons[i] = new Person();
+        }
+
+        for (Person person : persons){
+            System.out.println(person.helloWorld());
+        }
+    }
+
 }
